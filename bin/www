@@ -267,6 +267,14 @@ client.on('deleteFriend',data=>{
     else client.emit('deleteFriendRes',0)
   })
 })
+
+//清除房间
+client.on('clearRoom',data=>{
+   defaultRoom={};
+   publicRooms=[];
+   dRoomInfo={};
+   pRoomInfo=[];
+})
   //断开连接 服务端自动发送的事件
   client.on("off",(data)=>{
     console.log("有用户断开连接")
